@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo"><img src="image/visionlogo.jpg" alt="logo" style="height: 12vh; width: 10vw;"></div>
+            <div class="name">
+                <h1>VISION LIBRARY BOOKS STORE</h1>
+            </div>
+        </div>
+        <!-- pop up -->
+        <div class="container-tick-reg">
+            <div class="container-pop">
+                <div class="popup" id="popup">
+                    <img src="image/ticklogo.png" alt="">
+                    <h2>Thank You!</h2>
+                    <p>Your details has been successfully submitted.Thanks</p>
+                    <button type="button" class="ok-but" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+
+
+            <section class="mid1">
+
+                <form class="submitform" action="" method="post">
+                    <fieldset class="form">
+                        <legend>Registration form</legend>
+                        <label for="name">Name :</label>
+                        <div class="cus_name">
+                            <input type="" name="name" required>
+                        </div>
+                        <label for="conatact">Contact :</label>
+                        <div class="cus_name">
+                            <input type="contact" name="conatact" required>
+                        </div>
+                        <label for="Email">Email :</label>
+                        <div class="cus_name">
+                            <input type="Email" name="Email" required>
+                        </div>
+                        <label for="DOB">D.O.B :</label>
+                        <div class="cus_name">
+                            <input type="date" name="DOB">
+                        </div>
+                        <div class="sub-but">
+                            <input type="submit" value="SUBMIT" onclick="openPopup()">
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+            </section>
+        </div>
+        <script>
+            let popup = document.getElementById("popup");
+            function openPopup() {
+                popup.classList.add("open-popup");
+            }
+            function closePopup() {
+                popup.classList.remove("open-popup");
+            }
+        </script>
+
+</body>
+
+</html>
